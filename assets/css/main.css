@@ -3455,8 +3455,8 @@ textarea.form-control {
 .box{
   position:fixed;
   top:-200px;
-  left:30%;
-  right:30%;
+  left:10%;
+  right:10%;
   background-color:rgb(0, 0, 0);
   color:#f50136;
   padding:20px;
@@ -3489,6 +3489,9 @@ a.boxclose{
   -webkit-border-top-right-radius: 20px;
   -khtml-border-top-left-radius: 20px;
   -khtml-border-top-right-radius: 20px;
+}
+.box p{
+	color:#e2e6f1;
 }
 
 /*   -moz-border-radius:20px 20px 0px 0px;
