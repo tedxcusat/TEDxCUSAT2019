@@ -278,26 +278,39 @@
 
 
     <!--speaker section-->
-    <!--  <section class="pb100">
-        <div class="container">
-            <div class="section_title mb50">
-                <h3 class="title">
-                    our speakers
-                </h3>
-            </div>
+     <section class="pb100">
+    <div class="container" id="speakers">
+        <div class="section_title mb50">
+            <h3 class="title">
+               our speakers
+            </h3>
         </div>
-        <div class="row justify-content-center no-gutters">
-            <div class="col-md-3 col-sm-6">
-                <div class="speaker_box">
-                    <div class="speaker_img">
-                        <img src="assets/img/speakers/s1.png" alt="speaker name">
-                        <div class="info_box">
-                            <h5 class="name">Patricia Stone</h5>
-                            <p class="position">CEO Company</p>
-                        </div>
+    </div>
+    <div class="overlay" id="overlay" style="display:none;"></div>
+    <div class="row justify-content-center no-gutters">
+        <div class="col-md-3 col-sm-6">
+            <div class="speaker_box" id="speakerbox1">
+                <div class="speaker_img">
+                    <img src="assets/img/speakers/s1.png" alt="speaker name">
+                    <div class="info_box" >
+                        <h5 class="name">Patricia Stone</h5>
+                        <p class="position">CEO Company</p>
                     </div>
+                    
+
+                    <div class="box" id="box1">
+                    <a class="boxclose" id="boxclose"></a>
+                    <h1>Important message</h1>
+                    <p>
+                    1,Here comes a very important message for your user.
+                    Turn this window off by clicking the cross.
+                    </p>
+                    </div>
+            
                 </div>
             </div>
+        </div>
+		<!-- 
             <div class="col-md-3 col-sm-6">
                 <div class="speaker_box">
                     <div class="speaker_img">
@@ -376,8 +389,9 @@
                     </div>
                 </div>
             </div>
+ -->
         </div>
-    </section> -->
+    </section>
     <!--speaker section end -->
 
     <!--Price section-->
@@ -630,6 +644,20 @@
     <!-- scroll spy -->
 
     <!--  -->
+    <!-- for speakers -->
+  <script>
+    $(function() {
+    $('#speakerbox1').click(function(){
+        $('#overlay').fadeIn('fast',function(){
+            $('#box1').animate({'top':'160px'},500);
+        });
+    });
+    $('#overlay').click(function(){
+        $('#box1').animate({'top':'-200px'},500,function(){
+            $('#overlay').fadeOut('fast');
+        });
+    });
+</script>
 </body>
 
 </html>
